@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Anek+Gujarati&family=Anek+Tamil&family=Anton&family=DM+Sans:opsz@9..40&family=DM+Serif+Display&family=Didact+Gothic&family=GFS+Neohellenic&family=Kulim+Park&family=Kumbh+Sans&family=Lexend+Deca&family=Marcellus&family=PT+Sans+Narrow&family=Plus+Jakarta+Sans&family=Poetsen+One&family=Poppins&family=Preahvihear&family=Questrial&family=REM&family=Radio+Canada+Big&family=Raleway:wght@900&family=Roboto:wght@400;900&family=Sulphur+Point&family=Syne&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <title>weather-forecast-app</title>
+  </head>
+  <body>
+    <img
+      id="worldImage"
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/127/681/original/IHD_FORECAST_%28400_x_350_piksel%29_%288%29.png?1716935868"
+      alt=""
+    />
+    <div class="Container">
+      <header>
+        <form id="searchForm">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            id="searchFormInput"
+            class="searchFormInput"
+          />
+          <input type="submit" value="Search" id="searchButton" />
+        </form>
+      </header>
+      <main>
+        <div class="firstRow">
+          <div class="leftDetails">
+            <h1 id="cityName" style="font-weight: 900" ;>Paris</h1>
+            <br />
+            <p class="dataDetails" style="color: rgb(96, 90, 90)">
+              <span id="cityTime" style="color: rgb(96, 90, 90)"
+                >Tuesday 21.00,</span
+              >
+              <span id="cityDescription" style="color: rgb(96, 90, 90)"
+                >overcast clouds</span
+              >
+              Humidity:
+              <span id="humidityNumber" style="font-weight: 800; color: #fe346e"
+                >59</span
+              >, Wind:
+              <span id="windSpeed" style="font-weight: 800; color: #fe346e"
+                >7.2km/h</span
+              >
+            </p>
+          </div>
+          <div class="rightDetails">
+            <div id="icon"></div>
+            <div class="weatherTemperature" id="currentTemperature">21</div>
+            <div class="weatherUnit">°C</div>
+          </div>
+        </div>
+        <div class="secondRow">
+          <div class="days">
+            <div class="theDate">Tue</div>
+            <div class="theIcon">🌤️</div>
+            <div class="theTempature">
+              <span class="dayLight"
+                ><span class="dayLightTemp">15º</span>
+                <span class="night"> 9º</span>
+              </span>
+            </div>
+          </div>
+          <div class="days">
+            <div class="theDate">Tue</div>
+            <div class="theIcon">🌤️</div>
+            <div class="theTempature">
+              <span class="dayLight"
+                ><span class="dayLightTemp">15º</span>
+                <span class="night"> 9º</span>
+              </span>
+            </div>
+          </div>
+          <div class="days">
+            <div class="theDate">Tue</div>
+            <div class="theIcon">🌤️</div>
+            <div class="theTempature">
+              <span class="dayLight"
+                ><span class="dayLightTemp">15º</span>
+                <span class="night"> 9º</span>
+              </span>
+            </div>
+          </div>
+          <div class="days">
+            <div class="theDate">Tue</div>
+            <div class="theIcon">🌤️</div>
+            <div class="theTempature">
+              <span class="dayLight"
+                ><span class="dayLightTemp">15º</span>
+                <span class="night"> 9º</span>
+              </span>
+            </div>
+          </div>
+          <div class="days">
+            <div class="theDate">Tue</div>
+            <div class="theIcon">🌤️</div>
+            <div class="theTempature">
+              <span class="dayLight"
+                ><span class="dayLightTemp">15º</span>
+                <span class="night"> 9º</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>
+          This project was coded by
+          <a href="https://github.com/iremhazald" target="_blank"
+            >İrem Hazal Deveci</a
+          >
+          and is
+          <a href="#" target="_blank"> on GitHub</a>
+          and
+          <a href="#" target="_blank">hosted on Netlify</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+  <script src="src/script.js"></script>
+</html>
