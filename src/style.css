@@ -158,10 +158,10 @@ footer {
   display: flex;
   flex-direction: row;
   padding: 17px;
-  font-size: 11px;
+  font-size: 14px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 footer p {
