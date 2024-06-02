@@ -40,7 +40,7 @@ body {
 }
 
 .Container {
-  height: 70vh;
+  height: 72vh;
   width: 40%;
   background-color: #d2fafb;
   border-radius: 15px;
@@ -100,14 +100,38 @@ body {
   display: flex;
   flex-direction: row;
   width: 50%;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
 }
+.degree {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+}
+
 .weatherTemperature {
-  font-size: 72px;
+  position: fixed;
+  font-size: 65px;
   font-family: "DM Serif Display", serif;
   font-style: normal;
-  margin-left: 90px;
+  margin-left: -75px;
+  margin-top: 20px;
+}
+.weatherUnit {
+  position: fixed;
+  font-family: "DM Serif Display", serif;
+  font-style: normal;
+  font-size: 16px;
+  margin-top: 30px;
+  margin-left: -5px;
+}
+#rightIcon img {
+  height: 50px;
+  width: 50px;
+}
+
+#rightIcon {
+  margin-top: 40px;
+  margin-left: 20px;
 }
 
 .leftDetails {
@@ -125,7 +149,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 17px;
+  padding: 10px 17px;
   margin-top: 20px;
   background-color: #bff5f6;
 }
@@ -137,11 +161,22 @@ footer {
   font-size: 11px;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 footer p {
   padding: 11px;
   border-radius: 5px;
   color: rgb(170, 168, 168);
+}
+
+#theIcon img {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.theDate {
+  font-size: 13px;
+  text-align: center;
 }
