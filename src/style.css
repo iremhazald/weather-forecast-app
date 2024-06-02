@@ -40,7 +40,7 @@ body {
 }
 
 .Container {
-  height: 72vh;
+  height: 65vh;
   width: 40%;
   background-color: #d2fafb;
   border-radius: 15px;
@@ -149,7 +149,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 20px 17px;
+  padding: 10px 17px;
   margin-top: 20px;
   background-color: #bff5f6;
 }
@@ -161,7 +161,7 @@ footer {
   font-size: 11px;
   justify-content: center;
   align-items: center;
-  margin-bottom: -20px;
+  margin-bottom: 10px;
 }
 
 footer p {
