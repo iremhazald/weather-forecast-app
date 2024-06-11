@@ -29,7 +29,7 @@ body {
 }
 
 .Container {
-  height: 68%;
+  height: 65%;
   width: 40%;
   background-color: #d2fafb;
   border-radius: 15px;
@@ -58,7 +58,7 @@ header {
 #searchFormInput {
   background-color: #fbf9f2;
   border: none;
-  font-size: 12px;
+  font-size: 15px;
   width: 75%;
   border-radius: 6px;
   padding: 10px;
@@ -66,7 +66,7 @@ header {
 
 #searchButton {
   background-color: #fe346e;
-  font-size: 12px;
+  font-size: 15px;
   color: white;
   border: none;
   padding: 8px 10px;
@@ -107,7 +107,7 @@ main {
   flex-direction: column;
   width: 40%;
   height: 100%;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 .rightDetails {
   display: flex;
@@ -122,9 +122,15 @@ main {
   flex-direction: row;
 }
 #rightIcon {
-  height: 50px;
-  width: 50px;
+  height: 65px;
+  width: 65px;
 }
+
+#rightIcon img {
+  height: 65px;
+  width: 65px;
+}
+
 .weatherTemperature {
   font-size: 65px;
   font-family: "DM Serif Display", serif;
@@ -134,10 +140,6 @@ main {
   font-family: "DM Serif Display", serif;
   font-style: normal;
   font-size: 16px;
-}
-#rightIcon img {
-  height: 50px;
-  width: 50px;
 }
 
 .days {
@@ -154,12 +156,12 @@ main {
   height: 40%;
   padding: 5px 0px 5px;
   background-color: #bff5f6;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 footer {
   display: flex;
-  font-size: 10px;
+  font-size: 13px;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -179,11 +181,11 @@ footer p {
 }
 
 .theDate {
-  font-size: 13px;
+  font-size: 15px;
   text-align: center;
 }
 
 .theTempature {
-  font-size: 13px;
+  font-size: 15px;
   text-align: center;
 }
