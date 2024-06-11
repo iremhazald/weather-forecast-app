@@ -89,7 +89,8 @@ function displayForecast(response) {
     if (index < 6) {
       forecastHtml =
         forecastHtml +
-        ` <div class="days">
+        ` 
+         <div class="days">
             <div class="theDate">${formatDay(day.time)}</div>
             <div id="theIcon"> <img src="${
               day.condition.icon_url
@@ -104,7 +105,8 @@ function displayForecast(response) {
                 )}º</span>
               </span>
             </div>
-          </div>`;
+          </div>
+       `;
     }
   });
   secondRow.innerHTML = forecastHtml;
