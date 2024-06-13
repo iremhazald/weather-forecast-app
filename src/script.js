@@ -1,4 +1,5 @@
 function displaySearchedData(response) {
+  console.log(response.data.city);
   let temperatureElement = document.querySelector("#currentTemperature");
   let temperature = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#cityName");
@@ -13,19 +14,24 @@ function displaySearchedData(response) {
   description.innerHTML = response.data.condition.description;
   humidity.innerHTML = response.data.temperature.humidity;
   windSpeed.innerHTML = response.data.wind.speed;
-  console.log(response.data);
+  console.log(response.data.city);
+  getForecast(response.data.city);
 }
 
 function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#searchFormInput");
-  let city = searchInputElement.value;
+  searchCity(searchInputElement.value);
+}
 
+function searchCity(city) {
   let apiKey = "1e4573e080b57c89fadd0873aeof420t";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-
   axios.get(apiUrl).then(displaySearchedData);
 }
+
+let searchForm = document.querySelector("#searchForm");
+searchForm.addEventListener("submit", search);
 
 function formatDate(date) {
   let minutes = date.getMinutes();
@@ -54,25 +60,10 @@ function formatDate(date) {
   return `${formattedDay} ${hours}:${minutes}, `;
 }
 
-let searchForm = document.querySelector("#searchForm");
-searchForm.addEventListener("submit", search);
-
 let currentDateELement = document.querySelector("#cityTime");
 let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
-
-let defaultCity = "Istanbul";
-let apiKey = "1e4573e080b57c89fadd0873aeof420t";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${defaultCity}&key=${apiKey}&units=metric`;
-
-axios.get(apiUrl).then(displaySearchedData);
-
-function getForecast(city) {
-  let apiKey = "1e4573e080b57c89fadd0873aeof420t";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-  axios(apiUrl).then(displayForecast);
-}
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -80,6 +71,8 @@ function formatDay(timestamp) {
 
   return days[date.getDay()];
 }
+
+searchCity("İstanbul");
 
 function displayForecast(response) {
   let forecastHtml = "";
@@ -109,8 +102,13 @@ function displayForecast(response) {
        `;
     }
   });
+  let secondRow = document.querySelector(".secondRow");
   secondRow.innerHTML = forecastHtml;
 }
-let secondRow = document.querySelector(".secondRow");
 
-getForecast(defaultCity);
+function getForecast(city) {
+  let apiKey = "1e4573e080b57c89fadd0873aeof420t";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+getForecast("İstanbul");
